@@ -77,6 +77,7 @@ Example: `int number = 0;`
 `InputAction.ReadValue<T>()`
 * If an action has multiple bindings (e.g., WASD + gamepad stick), ReadValue() returns the combined value from all relevant devices.
 
+`IsPressed()` is an Input System-supported way to poll button state.
 
 ## Common Functionalities
 
