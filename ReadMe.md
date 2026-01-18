@@ -7,7 +7,8 @@ Basic Variable syntax for unity
 Example
 * `private float speed = 5; // Floats MUST end with an f if the float has a decimal value such as 5.1`
 
-Everything needs a semicolon (;) at the end of each line except for statements such as If statements.
+For basic C# knowledge, statements, field declarations/definitions, and method declarations need semicolons at the end of each line, but a few other things
+properties, method definitions, type definitions, for example, don't.
 
 Variables for the inspector should have a [SerializeField] before the [access]. This is the correct way to make variables that are editable in the inspector. Recommended to keep private unless I actually want the variable to be accessible by other scripts.
 Example:
