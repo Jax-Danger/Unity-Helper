@@ -55,6 +55,13 @@ Temporary variables are simply made via `[type] [name] = [value];` They don't us
 
 Example: `int number = 0;`
 
+Time.fixedDeltaTime
+* The interval in seconds of in-game time at which physics and other fixed frame rate updates (like MonoBehaviour's MonoBehaviour.FixedUpdate) are performed.
+
+Time.deltaTime
+* The interval in seconds from the last frame to the current one (Read Only).
+
+
 ## Input Related
 
 `InputActionAsset`
