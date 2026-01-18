@@ -5,7 +5,7 @@ Never manually position a camera that is driven by a distance variable.
 Basic Variable syntax for unity
 * `[access] [type] [name] = [value];`
 Example
-* `private speed = 5f; // Floats MUST end with an f`
+* `private float speed = 5; // Floats MUST end with an f if the float has a decimal value such as 5.1`
 
 Everything needs a semicolon (;) at the end of each line except for statements such as If statements.
 
@@ -49,7 +49,7 @@ Quick Mental Model (Keep This)
 * Scripts = behavior
 * GameObjects = containers
 
-Print in C# is `Debug.Log()`
+Print in Unity is `Debug.Log()`. Debug is Unity-specific API.
 Inside `Debug.Log()`, use a `$` before the quotes and add curly braces inside the quotes to print strings with variables.
 example: `Debug.Log($"Godmode is currently {godMode}");`
 
@@ -57,24 +57,28 @@ Temporary variables are simply made via `[type] [name] = [value];` They don't us
 
 Example: `int number = 0;`
 
-## Input related
-`Input.GetAxis()`
-* Reads smoothed WASD input
+## Input Related
+
+`InputActionAsset`
+* A serialized asset that defines the ACtions Maps, Actions, and bindings.
+* Used to centralize input configuration (keyboard, gamepad, etc.)
 
 `FindActionMap()`
 * An InputActionAsset can contain several action maps.
 * `FindActionMap("Name", true)` lookup an action map by name and returns it.
 
 `FindAction()`
-* returns the InputAction based on the name. If the name is invalid the true flag throws an error.
+* returns the InputAction based on the name. 
+* If the name is invalid the true flag throws an error.
 
 `Enable()`
 * InputSystem property that starts listening for input events on all actions in the specific map
 * Without calling Enable(), none of the actions will produce values.
 * Enabling the map activates all its actions.
 
-`ReadValue<T>()`
+`InputAction.ReadValue<T>()`
 * If an action has multiple bindings (e.g., WASD + gamepad stick), ReadValue() returns the combined value from all relevant devices.
+
 
 ## Common Functionalities
 
@@ -108,5 +112,5 @@ After normalization:
 * You are not rotating with Euler angles.
 * You are creating a quaternion from Euler angles.
 
-`transform.EulerAngles`
+`transform.eulerAngles`
 * A human readable representation of rotation in degrees
