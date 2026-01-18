@@ -1,5 +1,8 @@
 ## Important rules
-Never manually position a camera that is driven by a distance variable.
+* Never manually position a camera that is driven by a distance variable.
+* For basic C# knowledge, statements, field declarations/definitions, and method declarations need semicolons at the end of each line, but a few other things
+properties, method definitions, type definitions, for example, don't.
+* At the top of the class, if I want to force the object to require a specific component, such as Rigidbody, add `[RequireComponent(typeof(COMPONENT_TYPE)]`which forces the object to use that component
 
 ## Unity Things to Remember
 Basic Variable syntax for unity
@@ -7,19 +10,13 @@ Basic Variable syntax for unity
 Example
 * `private float speed = 5; // Floats MUST end with an f if the float has a decimal value such as 5.1`
 
-For basic C# knowledge, statements, field declarations/definitions, and method declarations need semicolons at the end of each line, but a few other things
-properties, method definitions, type definitions, for example, don't.
-
 Variables for the inspector should have a [SerializeField] before the [access]. This is the correct way to make variables that are editable in the inspector. Recommended to keep private unless I actually want the variable to be accessible by other scripts.
 Example:
 * `[SerializeField] private string Something = "Hello World";`
 
-At the top of the class, if I want to force the object to require a specific component, such as Rigidbody, add `[RequireComponent(typeof(COMPONENT_TYPE)]`which forces the object to use that component
-
 To lock the mouse to the game, inside of Start() add:
 * Cursor.lockState = CursorLockMode.Locked; 
 * Cursor.visible = false;
-
 
 ## Functions to get the script started.
 
