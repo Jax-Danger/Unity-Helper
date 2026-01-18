@@ -28,8 +28,10 @@ Runs once before first frame
 * void Start()
 Runs every frame (input)
 * void Update()
+  
 Runs on physics tick
 * void FixedUpdate()
+  
 OnEnable()
 * lifecycle method that runs when the GameObject becomes active(just before it starts running each frame)
 OnDisable()
