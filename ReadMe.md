@@ -24,22 +24,24 @@ To lock the mouse to the game, inside of Start() add:
 
 Runs first (initial setup)
 * void Awake()
+
 Runs once before first frame
 * void Start()
+
 Runs every frame (input)
 * void Update()
-  
+
 Runs on physics tick
 * void FixedUpdate()
-  
+
 OnEnable()
 * lifecycle method that runs when the GameObject becomes active(just before it starts running each frame)
+
 OnDisable()
 * Runs when the GameObject or component is disabled or destroyed.
+
 InputActionsAsset
-* Contains Action Maps(groups of related actions such as Movement),
-Actions(individual controls like Move and jump),
-Bindings(Keys/buttons that trigger an action)
+* Contains Action Maps(groups of related actions such as Movement), Actions(individual controls like Move and jump), Bindings(Keys/buttons that trigger an action)
 
 Quick Mental Model (Keep This)
 * Variables = state
@@ -51,31 +53,36 @@ Print in C# is `Debug.Log()`
 Inside `Debug.Log()`, use a `$` before the quotes and add curly braces inside the quotes to print strings with variables.
 example: `Debug.Log($"Godmode is currently {godMode}");`
 
-Temporary variables are simply made via [type] [name] = [value]; They don't use [access] or the `[SerializeField]` prefixes.
-Example:
-* `int number = 0;`
+Temporary variables are simply made via `[type] [name] = [value];` They don't use `[access]` or the `[SerializeField]` prefixes.
+
+Example: `int number = 0;`
 
 ## Input related
 `Input.GetAxis()`
 * Reads smoothed WASD input
+
 `FindActionMap()`
 * An InputActionAsset can contain several action maps.
-* FindActionMap("Name", true) lookup an action map by name and returns it.
+* `FindActionMap("Name", true)` lookup an action map by name and returns it.
+
 `FindAction()`
 * returns the InputAction based on the name. If the name is invalid the true flag throws an error.
+
 `Enable()`
 * InputSystem property that starts listening for input events on all actions in the specific map
 * Without calling Enable(), none of the actions will produce values.
 * Enabling the map activates all its actions.
+
 `ReadValue<T>()`
 * If an action has multiple bindings (e.g., WASD + gamepad stick), ReadValue() returns the combined value from all relevant devices.
 
-
 ## Common Functionalities
+
 `GetComponent<T>()`
 * A method that retrieves another component attached to the same GameObject.
 * T is the component type like RigidBody and such.
 * Used in the Awake()
+
 `Normalize() / .normalized`
 * Converts a vector to length 1, preserving direction.
 Example:
@@ -103,5 +110,3 @@ After normalization:
 
 `transform.EulerAngles`
 * A human readable representation of rotation in degrees
-
-`Physics.SphereCast`
