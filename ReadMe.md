@@ -3,7 +3,7 @@
 * For basic C# knowledge, statements, field declarations/definitions, and method declarations need semicolons at the end of each line, but a few other things
 properties, method definitions, type definitions, for example, don't.
 * At the top of the class, if I want to force the object to require a specific component, such as Rigidbody, add `[RequireComponent(typeof(COMPONENT_TYPE)]`which forces the object to use that component
-* Use `?` and `:` for variable conditions. Example float speed = sprintHeld ? SprintSpeed : WalkSpeed - is basically saying "If sprint held, choose the sprint speed, otherwise choose walkspeed"
+* Use `?` and `:` for variable conditions. Example `float speed = sprintHeld ? SprintSpeed : WalkSpeed` - is basically saying "If sprint held, choose the sprint speed, otherwise choose walkspeed"
 
 
 ## Unity Things to Remember
